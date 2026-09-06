@@ -1,0 +1,2 @@
+[console_scripts]
+fraptix = fraptix.cli:main
