@@ -1,5 +1,7 @@
 import json
 
+from fraptix import __version__
+
 
 class JSONReporter:
 
@@ -34,7 +36,7 @@ class JSONReporter:
     ):
         data = {
             "tool": "fraptix",
-            "version": "0.1.0",
+            "version": __version__,
             "application": app_name,
             "bench": str(bench_path),
             "path": str(app_path),
@@ -63,10 +65,8 @@ class JSONReporter:
             "column": finding.column,
             "message": finding.message,
         }
-    
-    def show_error(self, message):
-        import json
 
+    def show_error(self, message):
         print(
             json.dumps(
                 {

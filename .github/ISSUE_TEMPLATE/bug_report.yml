@@ -1,0 +1,57 @@
+name: 🐛 Bug report
+description: Something in Fraptix is not working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below.
+  - type: input
+    id: version
+    attributes:
+      label: Fraptix version
+      description: Output of `fraptix --version`
+      placeholder: fraptix 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Output of `python --version`
+      placeholder: Python 3.12.4
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Minimal steps to reproduce the issue, including the command you ran.
+        A small code sample that triggers the bug helps a lot.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Actual output
+      description: Paste the terminal output or error message (as text, not a screenshot).
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that might be relevant — OS, Frappe/ERPNext version, etc.
+    validations:
+      required: false

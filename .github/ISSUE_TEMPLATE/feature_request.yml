@@ -1,0 +1,42 @@
+name: ✨ Feature request
+description: Suggest an idea for Fraptix
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an idea! New rules are especially welcome — see
+        [CONTRIBUTING.md](https://github.com/ishtiyaq130/fraptix/blob/main/CONTRIBUTING.md#writing-a-new-rule)
+        for how they are structured.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem are you trying to solve? What motivated this request?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you like Fraptix to do?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: |
+        For a new rule, include a code snippet that should trigger it and one
+        that should not.
+      render: python
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you have thought about?
+    validations:
+      required: false
